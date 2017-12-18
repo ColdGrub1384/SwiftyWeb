@@ -1,6 +1,10 @@
 #!/bin/bash
 
-git clone https://github.com/ColdGrub1384/SwiftyWeb
+rm /usr/local/lib/SwiftyWeb.swift 2>&1 >/dev/null
+rm /usr/local/lib/SwiftyHTM.swift 2>&1 >/dev/null
+rm /usr/bin/swiftw 2>&1 >/dev/null
+
+git clone https://github.com/ColdGrub1384/SwiftyWeb > /dev/null
 cp SwiftyWeb/*.swift /usr/local/lib/
 cp SwiftyWeb/swiftw /usr/bin/
 rm -rf SwiftyWeb
@@ -14,4 +18,5 @@ if [ -f /usr/local/lib/SwiftyWeb.swift ]; then
     fi
 fi
 
+echo
 echo "Failed to install SwiftyWeb!"

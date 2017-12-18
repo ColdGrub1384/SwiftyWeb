@@ -14,7 +14,7 @@ echo "Content:"
 echo
 
 # Compile
-swiftc .CGISwiftCompile/*
+swiftc .CGISwiftCompile/* 2>&1
 
 # Run
 ./main
