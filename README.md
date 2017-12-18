@@ -4,6 +4,7 @@
 - [x] Global variables and functions
 - [x] No need to recompile for each edit
 - [x] Automatic library integration, no Package Manager
+- [x] Show compiler errors in browser
 - [ ] Slow loading
 - [ ] No MySQL
 
