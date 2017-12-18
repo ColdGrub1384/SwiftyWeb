@@ -1,72 +1,73 @@
 # SwiftyWeb
 ## Swift library for CGI
 
-- [ x ] Global variables and functions
-- [ x ] No need to recompile for each edit
-- [ x ] Automatic library integration, no Package Manager
-- [  ] Slow loading
-- [  ] No MySQL
+- [x] Global variables and functions
+- [x] No need to recompile for each edit
+- [x] Automatic library integration, no Package Manager
+- [ ] Slow loading
+- [ ] No MySQL
 
 SwiftyWeb includes a Swift helper for CGI that contains:
 
-    env: [String:String] // Environment variables
-    postString: String? // Scanned post query
-    readedPost: Bool // If POST was readed
+```swift
+env: [String:String] // Environment variables
+postString: String? // Scanned post query
+readedPost: Bool // If POST was readed
     
-    enum Method { // HTTP Methods
-       case POST
-       case GET
-    }
+enum Method { // HTTP Methods
+    case POST
+    case GET
+}
     
-    process(query: String) -> [String:String] // Process a query string into a dictionary
-    readPost() // Read POST input
+process(query: String) -> [String:String] // Process a query string into a dictionary
+readPost() // Read POST input
     
-    GET: [String:String] // Returns GET processed query
-    POST: [String:String] // Returns POST processed query and read input if it was not readed
-    isKey(_ key: String, setForMethod method: Method) -> Bool // If key is set in POST or GET
-    
+GET: [String:String] // Returns GET processed query
+POST: [String:String] // Returns POST processed query and read input if it was not readed
+isKey(_ key: String, setForMethod method: Method) -> Bool // If key is set in POST or GET
+```
 All these values are global, so you can use them like this:
-
-    if isKey("name", setForMethod: .GET) {
-        print(GET["name"])
-    }
+```swift
+if isKey("name", setForMethod: .GET) {
+    print(GET["name"])
+}
     
-    if isKey("password", setForMethod: .POST) {
-        print(POST["password"])
-    }
-    
+if isKey("password", setForMethod: .POST) {
+    print(POST["password"])
+}
+```
 SwiftyWeb also include a String extension with a function to generate HTML:
-
-    htm(_ attributes: [String] = [], inner:(() -> Void)? = nil)
-    
+```swift
+htm(_ attributes: [String] = [], inner:(() -> Void)? = nil)
+```
 You can use it like this:
+```swift
+// GET
+"h1".htm() {
+    print("GET Parameters")
+}
 
-    // GET
-    "h1".htm() {
-        print("GET Parameters")
-    }
-
-    "ul".htm() {
-        for (key, value) in GET {
-            "li".htm() {
-                print(key+":"+value)
-            }
+"ul".htm() {
+    for (key, value) in GET {
+        "li".htm() {
+            print(key+":"+value)
         }
     }
+}
 
-    // POST
-    "h1".htm() {
-        print("POST Parameters")
-    }
+// POST
+"h1".htm() {
+    print("POST Parameters")
+}
 
-    "ul".htm() {
-        for (key, value) in POST {
-            "li".htm() {
-                print(key+":"+value)
-            }
+"ul".htm() {
+    for (key, value) in POST {
+        "li".htm() {
+            print(key+":"+value)
         }
     }
-
+}
+```
 # Usage
 Init a project, install via the package manager, compile and move?
 
