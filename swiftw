@@ -1,0 +1,25 @@
+#!/bin/bash
+
+mkdir .CGISwiftCompile
+
+# Copy libraries
+cp /usr/local/lib/SwiftyWeb.swift .CGISwiftCompile/SwiftyWeb.swift
+cp /usr/local/lib/SwiftyHTM.swift .CGISwiftCompile/SwiftyHTM.swift
+
+# Setup the file
+cp $1 .CGISwiftCompile/main.swift
+
+echo "Content-Type: text/html"
+echo "Content:"
+echo
+
+# Compile
+swiftc .CGISwiftCompile/*
+
+# Run
+./main
+
+# Remove all
+rm -rf .CGISwiftCompile
+rm main
+

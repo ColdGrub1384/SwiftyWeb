@@ -1,0 +1,4 @@
+#!/bin/bash
+
+git clone https://github.com/ColdGrub1384/SwiftyWeb; cp SwiftyWeb/*.swift /usr/local/lib/; cp SwiftyWeb/swiftw /usr/bin/;
+rm -rf SwiftyWeb
