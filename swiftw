@@ -11,8 +11,8 @@ cp /usr/local/lib/SwiftyWeb.swift .CGISwiftCompile/SwiftyWeb.swift
 cp /usr/local/lib/SwiftyHTM.swift .CGISwiftCompile/SwiftyHTM.swift
 
 # Setup Swift files
-cp ${@:$#} .CGISwiftCompile/main.swift
-cp ${@:1:$(($#-1))} .CGISwiftCompile/
+cp ${@:$#} .CGISwiftCompile/main.swift &> /dev/null
+cp ${@:1:$(($#-1))} .CGISwiftCompile/ &> /dev/null
 
 # Compile
 swiftc .CGISwiftCompile/* 2>&1
