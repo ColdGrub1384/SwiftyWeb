@@ -1,17 +1,18 @@
 #!/bin/bash
 
+echo "Content-Type: text/html"
+echo "Content:"
+echo
+
 mkdir .CGISwiftCompile
 
 # Copy libraries
 cp /usr/local/lib/SwiftyWeb.swift .CGISwiftCompile/SwiftyWeb.swift
 cp /usr/local/lib/SwiftyHTM.swift .CGISwiftCompile/SwiftyHTM.swift
 
-# Setup the file
-cp $1 .CGISwiftCompile/main.swift
-
-echo "Content-Type: text/html"
-echo "Content:"
-echo
+# Setup Swift files
+cp ${@:$#} .CGISwiftCompile/main.swift
+cp ${@:1:$(($#-1))} .CGISwiftCompile/
 
 # Compile
 swiftc .CGISwiftCompile/* 2>&1
