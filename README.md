@@ -88,4 +88,10 @@ Now, you can write Swift CGIs putting this in the top or your file:
     // Your code here
 (Don't forget to chmod +x your file)
 
+You can also include other files:
+
+    #!/usr/bin/swiftw AnotherFile.swift
+
+    // Your code here
+
 SwiftyWeb is written in Swift 3 because Raspberry Pi doesn't supports Swift 4, but it's easy to convert to Swift 4.
