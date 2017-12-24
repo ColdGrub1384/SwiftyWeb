@@ -79,7 +79,7 @@ With SwiftyWeb, you can simply write your code and open the browser.
 
 Install typing this in a shell:
 
-    curl https://raw.githubusercontent.com/ColdGrub1384/SwiftyWeb/master/install | sudo bash
+    curl https://raw.githubusercontent.com/ColdGrub1384/SwiftyWeb/master/install 2>/dev/null | sudo bash
 
 Now, you can write Swift CGIs putting this in the top or your file:
 
