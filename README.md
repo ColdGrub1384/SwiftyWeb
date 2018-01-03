@@ -97,7 +97,9 @@ You can also include other files:
 
 ## Fast method
 Loading CGIs with '#!/usr/bin/swiftw' is very slow, you can compile files manually typing:
+
     swiftw -o PATH_TO_NEW_EXECUTABLE FILES TO COMPILE
+
 A file will be created and you can put it in your CGI's folder.
 
 SwiftyWeb is written in Swift 3 because Raspberry Pi doesn't supports Swift 4, but it's easy to convert to Swift 4.
