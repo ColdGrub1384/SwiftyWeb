@@ -1,1 +1,0 @@
-/home/pi/.bash_history
