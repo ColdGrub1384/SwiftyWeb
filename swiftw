@@ -4,6 +4,33 @@ echo "Content-Type: text/html"
 echo "Content:"
 echo
 
+f() {
+if [ "$#" -ne 0 ]; then
+  echo
+else
+  >&2 echo -e "Usage:\n$0: [-o] [OUTPUT FILE] [SWIFT FILES TO COMPILE...]\n\n-o: Save executable into given file to be ran from Web Browser\n\nNote: The last file will be the main file"
+  exit 1
+fi
+
+while getopts ":o:" opt; do
+  case $opt in
+    o)
+      output=$OPTARG;
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+    ;;
+  esac
+done
+}
+
+f "$@"
+
 mkdir .CGISwiftCompile
 
 # Copy libraries
@@ -20,7 +47,15 @@ swiftc .CGISwiftCompile/* 2>&1
 # Run
 ./main
 
+# If the ouput is set, add code to display in Web Browser
+if [ -z ${output+x} ]; then printf ""; else sed -i '1iprint("Content-Type: text/html");print("Content:");print("")' .CGISwiftCompile/main.swift; fi
+
+# Compile again if the output is set
+if [ -z ${output+x} ]; then printf ""; else swiftc .CGISwiftCompile/* 2>&1; fi
+
 # Remove all
 rm -rf .CGISwiftCompile
-rm main
+
+# If $output is set, keep the file
+if [ -z ${output+x} ]; then rm main; else mv main $output; fi
 
