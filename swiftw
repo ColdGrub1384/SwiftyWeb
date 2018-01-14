@@ -8,13 +8,16 @@ f() {
 if [ "$#" -ne 0 ]; then
   echo
 else
-  >&2 echo -e "Usage:\n$0: [-o] [OUTPUT FILE] [SWIFT FILES TO COMPILE...]\n\n-o: Save executable into given file to be ran from Web Browser\n\nNote: The last file will be the main file"
+  >&2 echo -e "Usage:\n$0: [-o, --output] [OUTPUT FILE] [SWIFT FILES TO COMPILE...]\n\n-o: Save executable into given file to be ran from Web Browser\n\nNote: The last file will be the main file"
   exit 1
 fi
 
-while getopts ":o:" opt; do
+while getopts ":o:-output:" opt; do
   case $opt in
     o)
+      output=$OPTARG;
+      ;;
+    -output)
       output=$OPTARG;
       ;;
     \?)
