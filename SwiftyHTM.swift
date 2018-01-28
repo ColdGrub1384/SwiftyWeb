@@ -1,7 +1,7 @@
 extension String {
 
   /// Print HTML from tag, attributes and inner
-  func htm(_ attributes: [String] = [], inner:(() -> Void)? = nil, single: Bool = false) {
+  func htm(_ attributes: [String] = [], single: Bool = false, inner:(() -> Void)? = nil) {
 
     var attributesString = ""
 
