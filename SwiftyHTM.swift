@@ -1,7 +1,7 @@
 extension String {
 
-  // Print HTML from tag, attributes and inner
-  func htm(_ attributes: [String] = [], inner:(() -> Void)? = nil) {
+  /// Print HTML from tag, attributes and inner
+  func htm(_ attributes: [String] = [], inner:(() -> Void)? = nil, single: Bool = false) {
 
     var attributesString = ""
 
@@ -15,8 +15,12 @@ extension String {
     if let inner = inner {
       inner()
     }
-    print("</\(self)>")
+    
+    if !single {
+	   print("</\(self)>")
+	 }
   }
+
 }
 
 
