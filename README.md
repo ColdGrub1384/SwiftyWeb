@@ -1,6 +1,7 @@
 # SwiftyWeb
 
 ![Swift](https://img.shields.io/badge/swift-3-orange.svg)
+<a href="https://coldgrub1384.github.io/SwiftyWeb/"><img src="https://coldgrub1384.github.io/SwiftyWeb/badge.svg"></a>
 
 ## Swift library for CGI
 
