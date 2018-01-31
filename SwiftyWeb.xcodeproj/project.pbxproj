@@ -14,11 +14,11 @@
 
 /* Begin PBXFileReference section */
 		3ACE04FA20220252002C0ACE /* SwiftyWeb.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SwiftyWeb.swift; sourceTree = "<group>"; tabWidth = 2; };
-		3ACE04FB20220258002C0ACE /* SwiftyHTM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyHTM.swift; sourceTree = "<group>"; };
+		3ACE04FB20220258002C0ACE /* SwiftyHTM.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SwiftyHTM.swift; sourceTree = "<group>"; tabWidth = 2; };
 		3ACE0501202202FC002C0ACE /* SwiftyWeb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyWeb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ACE0504202202FD002C0ACE /* SwiftyWeb.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftyWeb.h; sourceTree = "<group>"; };
 		3ACE0505202202FD002C0ACE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3ACE050C202203CE002C0ACE /* swiftw */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = swiftw; sourceTree = "<group>"; };
+		3ACE050C202203CE002C0ACE /* swiftw */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = text.script.sh; path = swiftw; sourceTree = "<group>"; tabWidth = 2; };
 		3ACE050E202203D7002C0ACE /* install */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install; sourceTree = "<group>"; };
 		3ACE0510202203F6002C0ACE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
