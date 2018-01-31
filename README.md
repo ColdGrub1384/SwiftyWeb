@@ -56,16 +56,16 @@ Install typing this in a shell:
 ### Slow method
 Now, you can write Swift CGIs putting this in the top or your file:
 
-#!/usr/bin/swiftw
+    #!/usr/bin/swiftw
 
-// Your code here
-(Don't forget to chmod +x your file)
+    // Your code here
+    (Don't forget to chmod +x your file)
 
 You can also include other files:
 
-#!/usr/bin/swiftw AnotherFile.swift
+    #!/usr/bin/swiftw AnotherFile.swift
 
-// Your code here
+    // Your code here
 
 ### Fast method
 Loading CGIs with '#!/usr/bin/swiftw' is very slow, you can compile files manually typing:
