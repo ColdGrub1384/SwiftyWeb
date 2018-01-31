@@ -11,7 +11,11 @@ public var readedPost = false
 
 /// An enumeration of HTTP methods supported by SwiftyWeb.
 public enum Method {
+    
+  /// Post method.
   case POST
+  
+  /// Get method.
   case GET
 }
 
