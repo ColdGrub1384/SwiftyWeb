@@ -1,16 +1,16 @@
 import Foundation
 
 /// Environment variables.
-let env = ProcessInfo.processInfo.environment
+public let env = ProcessInfo.processInfo.environment
 
 /// POST query readed with `readPost()`.
-var postString: String?
+public var postString: String?
 
 /// If POST query was readed with `readPost()`.
-var readedPost = false
+public var readedPost = false
 
 /// An enumeration of HTTP methods supported by SwiftyWeb.
-enum Method {
+public enum Method {
   case POST
   case GET
 }
@@ -22,7 +22,7 @@ enum Method {
 ///
 /// - Returns:
 ///     - Processed dictionary.
-func process(query: String) -> [String:String] {
+public func process(query: String) -> [String:String] {
   let items = query.components(separatedBy: "&")
   
   var dict = [String:String]()
@@ -40,7 +40,7 @@ func process(query: String) -> [String:String] {
 }
 
 /// Read POST query if there is one.
-func readPost() {
+public func readPost() {
   readedPost = true
   guard let length_ = env["CONTENT_LENGTH"] else { return }
   if let length = Int(length_) {
@@ -51,13 +51,13 @@ func readPost() {
 }
 
 /// Returns parsed GET query.
-var GET: [String:String] {
+public var GET: [String:String] {
   guard let query = env["QUERY_STRING"] else { return [:] }
   return process(query: query)
 }
 
 /// Reads POST query and returns parsed query.
-var POST: [String:String] {
+public var POST: [String:String] {
   if !readedPost {
     readPost()
   }
@@ -70,7 +70,7 @@ var POST: [String:String] {
 /// - Parameters:
 ///     - key: Key to check.
 ///     - method: Method of query where search `key`.
-func isKey(_ key: String, setForMethod method: Method) -> Bool {
+public func isKey(_ key: String, setForMethod method: Method) -> Bool {
   var dict: [String:String] {
     if method == .POST {
       return POST

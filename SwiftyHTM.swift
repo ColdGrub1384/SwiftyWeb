@@ -1,4 +1,4 @@
-extension String {
+public extension String {
 
   /// Print HTML from given tag, attributes and inner.
   ///
@@ -33,7 +33,7 @@ extension String {
   ///        </div>
   ///     */
   ///
-  func htm(_ attributes: [String] = [], single: Bool = false, inner:(() -> Void)? = nil) {
+  public func htm(_ attributes: [String] = [], single: Bool = false, inner:(() -> Void)? = nil) {
     
     var attributesString = ""
 
