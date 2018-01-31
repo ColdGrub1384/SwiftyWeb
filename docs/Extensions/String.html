@@ -107,38 +107,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Print HTML from given tag, attributes and inner.</p>
-
-<p>Example:</p>
+                        <p>Print HTML from given tag, attributes and inner.
+  Examples:</p>
 <pre class="highlight swift"><code>  <span class="s">"a"</span><span class="o">.</span><span class="nf">htm</span><span class="p">(</span><span class="s">"href='https://www.google.com'"</span><span class="p">)</span>
   <span class="c1">// &lt;a href='https://www.google.com'&gt;&lt;/a&gt;</span>
-</code></pre>
 
-<ul>
-<li>single: If the tag is single, default is false.</li>
-</ul>
-
-<p>Example:</p>
-<pre class="highlight swift"><code><span class="s">"br"</span><span class="o">.</span><span class="nf">htm</span><span class="p">(</span><span class="nv">single</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
-<span class="c1">// &lt;br&gt;</span>
-</code></pre>
-
-<ul>
-<li>inner: Code executed before closing the tag, use it to print inner html.</li>
-</ul>
-
-<p>Example:</p>
-<pre class="highlight swift"><code><span class="s">"div"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
-  <span class="s">"p"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
+  <span class="s">"div"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+    <span class="s">"p"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nf">print</span><span class="p">(</span><span class="s">"Hello World!"</span><span class="p">)</span>
+    <span class="p">}</span>
   <span class="p">}</span>
-<span class="p">}</span>
-<span class="cm">/* &lt;div&gt;
-   &lt;p&gt;
-   Hello World!
-   &lt;/p&gt;
-   &lt;/div&gt;
-*/</span>
+  <span class="cm">/* &lt;div&gt;
+    &lt;p&gt;
+    Hello World!
+    &lt;/p&gt;
+    &lt;/div&gt;
+  */</span>
+
+  <span class="s">"br"</span><span class="o">.</span><span class="nf">htm</span><span class="p">(</span><span class="nv">single</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+  <span class="c1">// &lt;br&gt;</span>
 </code></pre>
 
                       </div>
