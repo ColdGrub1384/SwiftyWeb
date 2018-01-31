@@ -2,7 +2,7 @@
 ## Swift library for CGI
 
 - [x] Global variables and functions
-- [x] No need to recompile for each edit
+- [x] No need to recompile for each edit (but supported)
 - [x] Automatic library integration, no Package Manager
 - [x] Show compiler errors in browser
 - [ ] No MySQL
@@ -38,7 +38,7 @@ if isKey("password", setForMethod: .POST) {
 ```
 SwiftyWeb also include a String extension with a function to generate HTML:
 ```swift
-htm(_ attributes: [String] = [], inner:(() -> Void)? = nil)
+htm(_ attributes: [String] = [], single: Bool = false, inner:(() -> Void)? = nil)
 ```
 You can use it like this:
 ```swift
