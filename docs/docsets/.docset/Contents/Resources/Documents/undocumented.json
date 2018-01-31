@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/adrian/Documents/SwiftyWeb/SwiftyWeb.swift",
+      "line": 14,
+      "symbol": "Method.POST",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/adrian/Documents/SwiftyWeb/SwiftyWeb.swift",
+      "line": 15,
+      "symbol": "Method.GET",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/adrian/Documents/SwiftyWeb"
+}

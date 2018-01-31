@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+          Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:9SwiftyWeb3GETs10DictionaryVyS2SGv">GET</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:9SwiftyWeb4POSTs10DictionaryVyS2SGv">POST</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:9SwiftyWeb3envs10DictionaryVyS2SGv">env</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:9SwiftyWeb10postStringSSSgv">postString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:9SwiftyWeb10readedPostSbv">readedPost</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/Method.html">Method</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9SwiftyWeb5isKeySbSS_AA6MethodO06setForE0tF">isKey(_:setForMethod:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9SwiftyWeb7processs10DictionaryVyS2SGSS5query_tF">process(query:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:9SwiftyWeb8readPostyyF">readPost()</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='swiftyweb' class='heading'>SwiftyWeb</h1>
+
+<p><img src="https://img.shields.io/badge/swift-3-orange.svg" alt="Swift"></p>
+<h2 id='swift-library-for-cgi' class='heading'>Swift library for CGI</h2>
+
+<ul>
+<li>[x] Global variables and functions</li>
+<li>[x] No need to recompile for each edit (but supported)</li>
+<li>[x] Automatic library integration, no Package Manager</li>
+<li>[x] Show compiler errors in browser</li>
+<li>[ ] MySQL</li>
+</ul>
+
+<p>SwiftyWeb includes a Swift helper for CGI.</p>
+
+<p>You can use it like this:</p>
+<pre class="highlight swift"><code><span class="c1">// GET</span>
+<span class="s">"h1"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"GET Parameters"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="s">"ul"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="nf">GET</span> <span class="p">{</span>
+        <span class="s">"li"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">key</span><span class="o">+</span><span class="s">":"</span><span class="o">+</span><span class="n">value</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// POST</span>
+<span class="s">"h1"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"POST Parameters"</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="s">"ul"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span> <span class="k">in</span> <span class="nf">POST</span> <span class="p">{</span>
+        <span class="s">"li"</span><span class="o">.</span><span class="nf">htm</span><span class="p">()</span> <span class="p">{</span>
+            <span class="nf">print</span><span class="p">(</span><span class="n">key</span><span class="o">+</span><span class="s">":"</span><span class="o">+</span><span class="n">value</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h1 id='usage' class='heading'>Usage</h1>
+
+<p>Init a project, install via the package manager, compile and move?</p>
+
+<p>NO.</p>
+
+<p>With SwiftyWeb, you can simply write your code and open the browser.</p>
+<h2 id='linux-and-mac' class='heading'>Linux and Mac</h2>
+
+<p>Install typing this in a shell:</p>
+<pre class="highlight plaintext"><code>curl https://raw.githubusercontent.com/ColdGrub1384/SwiftyWeb/master/install 2&gt;/dev/null | sudo bash
+</code></pre>
+<h3 id='slow-method' class='heading'>Slow method</h3>
+
+<p>Now, you can write Swift CGIs putting this in the top or your file:</p>
+<pre class="highlight plaintext"><code>#!/usr/bin/swiftw
+
+// Your code here
+(Don't forget to chmod +x your file)
+</code></pre>
+
+<p>You can also include other files:</p>
+<pre class="highlight plaintext"><code>#!/usr/bin/swiftw AnotherFile.swift
+
+// Your code here
+</code></pre>
+<h3 id='fast-method' class='heading'>Fast method</h3>
+
+<p>Loading CGIs with &lsquo;#!/usr/bin/swiftw&rsquo; is very slow, you can compile files manually typing:</p>
+
+<p>swiftw -o PATH_TO_NEW_EXECUTABLE FILES TO COMPILE</p>
+
+<p>A file will be created and you can put it in your CGI&rsquo;s folder.</p>
+<h2 id='mac' class='heading'>Mac</h2>
+
+<p>In Mac, you can also build the framework opening <code>SwiftyWeb.xcodeproj</code> and include framework in your command line project. Don&rsquo;t forgot to print <code>&quot;Content-Type: text/html\nContent:\n&quot;</code>!</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2018-01-31)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.1</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
