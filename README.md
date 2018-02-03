@@ -92,4 +92,4 @@ If you want to contribute to the documentation, don't edit the `docs` directory,
 
 - And run the [`build-documentation.sh`](https://github.com/ColdGrub1384/SwiftyWeb/blob/master/build-documentation.sh) script inside this repo.
 
-- Increment `version` field in [`docs/docsets/Pisth.xml`](https://github.com/ColdGrub1384/SwiftyWeb/blob/master/docs/docsets/Pisth.xml).
+- Increment `version` field in [`docs/docsets/Pisth.xml`](https://github.com/ColdGrub1384/SwiftyWeb/blob/master/docs/docsets/SwiftyWeb.xml).
