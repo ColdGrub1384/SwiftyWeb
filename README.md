@@ -54,6 +54,10 @@ Install typing this in a shell:
 
     curl https://raw.githubusercontent.com/ColdGrub1384/SwiftyWeb/master/install 2>/dev/null | sudo bash
 
+Or, inside this repo, run:
+
+	./install nodownload
+
 ### Slow method
 Now, you can write Swift CGIs putting this in the top or your file:
 
