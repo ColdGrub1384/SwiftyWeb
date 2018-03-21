@@ -4,10 +4,16 @@ rm /usr/local/lib/SwiftyWeb.swift 2>&1 >/dev/null
 rm /usr/local/lib/SwiftyHTM.swift 2>&1 >/dev/null
 rm /usr/bin/swiftw 2>&1 >/dev/null
 
+if [[ "$@" == "download" ]]
+then
 git clone https://github.com/ColdGrub1384/SwiftyWeb > /dev/null
 cp SwiftyWeb/*.swift /usr/local/lib/
 cp SwiftyWeb/swiftw /usr/bin/
 rm -rf SwiftyWeb
+else
+cp *.swift /usr/local/lib
+cp swiftw /usr/bin/
+fi
 
 if [ -f /usr/local/lib/SwiftyWeb.swift ]; then
     if [ -f /usr/local/lib/SwiftyHTM.swift ]; then
