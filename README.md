@@ -92,7 +92,7 @@ If you want to contribute to the documentation, don't edit the `docs` directory,
 
 - Install Jazzy:
 
-[sudo] gem install jazzy
+`[sudo] gem install jazzy`
 
 - And run the [`build-documentation.sh`](https://github.com/ColdGrub1384/SwiftyWeb/blob/master/build-documentation.sh) script inside this repo.
 
