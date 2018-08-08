@@ -81,7 +81,7 @@ A file will be created and you can put it in your CGI's folder.
 
 ## Mac
 
-In Mac, you can also build the framework opening `SwiftyWeb.xcodeproj` and include framework in your command line project. Don't forgot to print `"Content-Type: text/html\nContent:\n"`!
+In Mac, you can also build the framework opening `SwiftyWeb.xcodeproj` and include framework in your command line project. Don't forget to print `"Content-Type: text/html\nContent:\n"`!
 
 
 # Documentation
